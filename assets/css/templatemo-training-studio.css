@@ -1226,6 +1226,69 @@ footer p a:hover {
   color: #ed563b;
 }
 
+.contact-box h5 {
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between text and icon */
+}
+
+.footer-right a {
+  text-decoration: none;
+}
+
+.facebook-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin-bottom: 10px; /* Add spacing between stacked elements */
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container p {
+    font-size: 12px; /* Smaller text for very small screens */
+  }
+
+  .facebook-icon {
+    width: 20px; /* Scale down the icon size */
+    height: 20px;
+  }
+}
+
 /* 
 ---------------------------------------------
 preloader
@@ -1352,12 +1415,12 @@ responsive
   #contact-us #map {
     margin-bottom: -7px;
   }
-  #contact-us .contact-form {
+  /* #contact-us .contact-form {
     padding: 30px;
-  }
-  #contact-us .contact-form #contact {
+  } */
+  /* #contact-us .contact-form #contact {
     padding: 30px;
-  }
+  } */
 }
 
 @media (max-width: 450px) {
@@ -1383,7 +1446,7 @@ ul.custom-bullets li::before {
   position: absolute;
   left: 0;
   color: orange; /* Custom bullet color */
-  font-size: 1em; /* Adjust bullet size */
+  font-size: 1rem; /* Adjust bullet size */
   line-height: 1; /* Align bullets with text */
   top: 0; /* Align bullet with the top of the text */
 }
@@ -1436,6 +1499,7 @@ ul.custom-bullets li {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   text-align: center;
+  font-size: 14px;
 }
 
 .contact-box h2 {
@@ -1456,4 +1520,9 @@ ul.custom-bullets li {
 
 .contact-box a:hover {
   text-decoration: underline;
+}
+
+li {
+  font-size: 14px;
+  color: #7a7a7a;
 }
