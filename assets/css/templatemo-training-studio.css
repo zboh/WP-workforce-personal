@@ -1531,3 +1531,7 @@ li {
 .service-image {
   height: 350px;
 }
+
+.main-photo {
+  width: 100%;
+}
