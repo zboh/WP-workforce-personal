@@ -130,6 +130,52 @@
     });
   }
 
+  $(document).ready(function () {
+    // Smooth scroll for anchor links
+    $('.scroll-to-section a[href^="#"]').on("click", function (e) {
+      e.preventDefault();
+      $(document).off("scroll");
+
+      $("a").each(function () {
+        $(this).removeClass("active");
+      });
+      $(this).addClass("active");
+
+      var target = this.hash,
+        menu = target;
+      var target = $(this.hash);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: target.offset().top + 1,
+          },
+          500,
+          "swing",
+          function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+          }
+        );
+    });
+
+    // Function to handle active menu item based on current URL
+    function setActiveMenuItem() {
+      var currentPath = window.location.pathname;
+      $(".nav a").each(function () {
+        var currLink = $(this);
+        var linkPath = currLink.attr("href");
+        if (currentPath === linkPath) {
+          $(".nav ul li a").removeClass("active");
+          currLink.addClass("active");
+        }
+      });
+    }
+
+    // Set active menu item on page load
+    setActiveMenuItem();
+  });
+
   // Page loading animation
   $(window).on("load", function () {
     $("#js-preloader").addClass("loaded");
