@@ -20,7 +20,7 @@
 
       // Change logo based on window width
       if ($(window).width() > 767) {
-        logo.attr("src", "/assets/images/wp_logo_white.png"); // Revert logo to white version when not scrolled and window width > 767px
+        logo.attr("src", "/assets/images/wp_logo_black.png"); // Revert logo to white version when not scrolled and window width > 767px
       } else {
         logo.attr("src", "/assets/images/wp_logo_black.png"); // Keep logo black when window width <= 767px
       }
@@ -34,7 +34,7 @@
     if ($(window).width() <= 767) {
       logo.attr("src", "/assets/images/wp_logo_black.png"); // Change logo to black version if window width <= 767px
     } else {
-      logo.attr("src", "/assets/images/wp_logo_white.png"); // Change logo to white version if window width > 767px
+      logo.attr("src", "/assets/images/wp_logo_black.png"); // Change logo to white version if window width > 767px
     }
   }
 
